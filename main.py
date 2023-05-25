@@ -6,7 +6,7 @@ import requests
 ### obtener palabras aleatorias en ingles
 def get_words():
 
-    api_key = 'YOUR API KEY'
+    api_key = 'feK9lj0uEgqcbo9+pMt3zg==oUiCoz87wZc9Xu17'
 
     api_url = 'https://api.api-ninjas.com/v1/randomword'
     response = requests.get(api_url, headers={'X-Api-Key': api_key})
@@ -186,6 +186,7 @@ def main():
     global text_var
     global counter_var
     global counter
+    global btn_restart
 
     timer_int = 59
     counter_var = 0
@@ -193,6 +194,8 @@ def main():
 
     btn['text'] = 'Start' 
     btn['state'] = 'active'
+
+    btn_restart['state'] = 'disabled'
 
     label['text'] = 'Are you ready?'
 
